@@ -1,0 +1,72 @@
+.intro{
+
+	#intro{
+		padding:30px;
+		text-align: center;
+		border-bottom:1px dotted $seperator-color;
+
+		h1{
+			margin:0;
+			font-size:3em;
+
+			@include mq("phone-wide") {
+				line-height: 0.85;
+				margin-bottom:10px;
+			}
+		}
+
+		h2{
+			font-size:1.3em;
+			margin-bottom:30px;
+			color: $accent-color;
+
+			@include mq("phone-wide") {
+				margin-bottom:20px;
+			}
+		}
+
+		img{
+			border-radius: 50%;
+			margin-bottom:20px;
+		}
+
+		p{
+			color: $p-text-color;
+			margin-bottom:10px;
+			font-size:1.2em;
+		}
+
+		ol{
+			@include unlistify;
+			margin:20px 0 0;
+
+			li{
+
+				a{
+					color: $main-text-color;
+
+					&:hover,
+					&:active,
+					&:focus{
+						color: $link-color;
+					}
+				}
+
+				i{
+					font-size:2em;
+				}
+
+				&:after{
+					content: "•";
+					margin:0 10px;
+					font-size:2em;
+				}
+
+				&:last-child:after{
+					content:" ";
+				}
+			}
+		}
+	}
+}
+

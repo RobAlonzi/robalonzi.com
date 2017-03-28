@@ -1,0 +1,49 @@
+//COLOURS
+$main-bg-color:#FFF;
+$main-text-color: #141414;
+$link-color: #2980b9;
+$accent-color: #9E9E9E;
+$p-text-color: darken($accent-color, 25%);
+$seperator-color: lighten($accent-color, 20%);
+
+
+@mixin unlistify{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    > li{
+        margin: 0;
+        padding: 0;
+		display:inline-block;
+    }
+}
+
+
+
+
+$breakpoints: (
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "tablet-wide":  1024px,
+    "1120":         1120px,
+    "desktop":      1248px,
+    "desktop-wide": 1440px,
+    "1615":         1615px,
+    "max-layout": 1650px
+);
+
+@mixin mq($width, $type: max) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        @if $type == max {
+            $width: $width - 1px;
+        }
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}

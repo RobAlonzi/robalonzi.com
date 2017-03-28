@@ -1,0 +1,45 @@
+@import "utils/normalize";
+@import "utils/animate";
+@import "utils/variables";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html{
+  	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+}
+
+body{
+	background: $main-bg-color;
+	color: $main-text-color;
+}
+
+a{
+	text-decoration: none;
+	color: $link-color;
+
+	&:hover{
+		text-decoration: underline;
+	}
+
+	&:focus{
+		font-weight: bold;
+	}
+}
+
+.content-wrap{
+	max-width: 800px;
+	padding:15px;
+	margin:0 auto;
+}
+
+@import "components/header";
+@import "components/intro";
+@import "components/about";
+@import "components/footer";

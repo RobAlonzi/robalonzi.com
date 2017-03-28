@@ -1,0 +1,23 @@
+.top-nav{
+	@include unlistify;
+	padding: 10px 0 10px 10px;
+	border-bottom:1px dotted $seperator-color;
+
+	a{
+		display: inline-block;
+		padding: 10px;
+		text-align: center;
+		outline: none;
+		border-radius: 10px;
+
+		&:hover,
+		&:active,
+		&:focus{
+			border: 1px solid $link-color;
+			padding:9px;
+			text-decoration: none;
+		}
+
+
+	}
+}

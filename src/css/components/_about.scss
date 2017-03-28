@@ -1,0 +1,88 @@
+.about{
+	ol{
+		@include unlistify;
+
+		li{
+			padding:40px 0;
+			border-bottom:1px dotted $seperator-color;
+			width:100%;
+
+			&:first-child{
+				padding: 0 0 40px;
+			}
+
+			&:last-child{
+				border:0;
+			}
+
+			.about-left{
+				width:15%;
+				float:left;
+
+				@include mq("tablet") {
+					width: 20%;
+				}
+
+				@include mq("phone-wide") {
+					width: 25%;
+				}
+
+
+				i{
+					font-size:7.5em;
+					float:left;
+					margin-top:-20px;
+					text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+
+					@include mq("tablet-small") {
+						font-size:6em;
+						margin-top:-10px;
+					}
+
+					@include mq("phone-wide") {
+						font-size:5em;
+					}
+
+					&#laptop-icon{
+						color:#e67e22;
+					}
+
+					&#wrench-icon{
+						color:#7f8c8d;
+					}
+
+					&#lightbulb-icon{
+						color:#f1c40f;
+					}
+
+					&#heart-icon{
+						color:#c0392b;
+					}
+				}
+			}
+
+			.about-right{
+				width:80%;
+				float:right;
+
+				@include mq("tablet") {
+					width: 75%;
+				}
+
+				@include mq("phone-wide") {
+					width: 70%;
+				}
+
+				h3{
+					margin-bottom:10px;
+				}
+
+				p{
+					text-align: justify;
+					color:$p-text-color;
+					line-height:1.5;
+				}
+			}
+		}
+	}
+}
